@@ -69,8 +69,8 @@ project-root/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-org/chat-backend.git
-cd chat-backend
+git clone https://github.com/your-org/project-yum.git
+cd project-yum
 ```
 
 ### 2. Install dependencies
@@ -200,7 +200,7 @@ npm run build
 
 ```bash
 # Build Docker image
-docker build -t chat-backend .
+docker build -t project-yum .
 
 # Run container
 docker run -d \
@@ -209,7 +209,7 @@ docker run -d \
   -e REDIS_URL=$REDIS_URL \
   -e JWT_SECRET=$JWT_SECRET \
   -p 4000:4000 \
-  chat-backend
+  project-yum
 ```
 
 ### 3. Kubernetes Deployment
@@ -224,20 +224,20 @@ Example deployment configuration:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: chat-backend
+  name: project-yum
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: chat-backend
+      app: project-yum
   template:
     metadata:
       labels:
-        app: chat-backend
+        app: project-yum
     spec:
       containers:
-        - name: chat-backend
-          image: chat-backend:latest
+        - name: project-yum
+          image: project-yum:latest
           ports:
             - containerPort: 4000
           env:
@@ -344,6 +344,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 For questions or issues:
 
-- 📧 Email: [your-email@example.com](mailto:your-email@example.com)
-- 🐛 Issues: [GitHub Issues](https://github.com/your-org/chat-backend/issues)
-- 📖 Documentation: [Wiki](https://github.com/your-org/chat-backend/wiki)
+- 📧 Email: [your-email@example.com](mailto:mayan6378@gmail.com.com)
+- 🐛 Issues: [GitHub Issues](https://github.com/your-org/project-yum/issues)
+- 📖 Documentation: [Wiki](https://github.com/your-org/project-yum/wiki)
